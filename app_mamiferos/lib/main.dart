@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'animal_details.dart';
 import 'animal_data.dart';
 
 void main() {
@@ -44,9 +45,17 @@ class MyApp extends StatelessWidget {
                                           Row(children: <Widget>[
                                             animalName(animalData[index]),
                                             Spacer(),
-                                            arrowIcon(),
-
-
+                                            IconButton(
+                                                constraints: BoxConstraints(),
+                                                iconSize: 24,
+                                                icon: new Icon(Icons.arrow_forward, color: Colors.orange),
+                                                onPressed: (){
+                                                  Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(builder: (context) => AnimalDetails(index)),
+                                                  );
+                                                }
+                                            ),
 
                                           ]),
                                           Row(
@@ -91,15 +100,6 @@ class MyApp extends StatelessWidget {
           style: TextStyle(fontSize: 20),
         ),
       ),
-    );
-  }
-
-  Widget arrowIcon() {
-    return Icon(
-      Icons.arrow_forward,
-      color: Colors.orange,
-      size: 24.0,
-      semanticLabel: 'Text to announce in accessibility modes',
     );
   }
 
