@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
                       itemBuilder: (context, index) {
                         return Container(
                           padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
-                          height: 220,
+                          height: 240,
                           width: double.maxFinite,
                           child: Card(
                             elevation: 5,
@@ -40,28 +40,31 @@ class MyApp extends StatelessWidget {
                                       Padding(
                                         padding:
                                         const EdgeInsets.only(left: 10, top: 5, right: 9),
-                                        child: Column(children: <Widget>[
-                                          animalPhotoFootprint(animalData[index]),
-                                          Row(children: <Widget>[
-                                            animalName(animalData[index]),
-                                            Spacer(),
-                                            IconButton(
-                                                constraints: BoxConstraints(),
-                                                iconSize: 24,
-                                                icon: new Icon(Icons.arrow_forward, color: Colors.orange),
-                                                onPressed: (){
-                                                  Navigator.push(
-                                                    context,
-                                                    MaterialPageRoute(builder: (context) => AnimalDetails(index)),
-                                                  );
-                                                }
-                                            ),
+                                        child: Wrap(
+                                          children: <Widget>[ Column(children: <Widget>[
+                                            animalPhotoFootprint(animalData[index]),
+                                            Row(children: <Widget>[
+                                              animalName(animalData[index]),
+                                              Spacer(),
+                                              IconButton(
+                                                  constraints: BoxConstraints(),
+                                                  iconSize: 24,
+                                                  icon: new Icon(Icons.arrow_forward, color: Colors.orange),
+                                                  onPressed: (){
+                                                    Navigator.push(
+                                                      context,
+                                                      MaterialPageRoute(builder: (context) => AnimalDetails(index)),
+                                                    );
+                                                  }
+                                              ),
 
+                                            ]),
+                                            Row(
+                                              children: <Widget>[scientificName(animalData[index])],
+                                            )
                                           ]),
-                                          Row(
-                                            children: <Widget>[scientificName(animalData[index])],
-                                          )
-                                        ]),
+                                           ]
+                                        ),
                                       ),
                                     ]),
                                   )
