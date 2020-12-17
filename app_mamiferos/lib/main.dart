@@ -14,6 +14,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+          appBar: AppBar(
+              backgroundColor: Colors.orange,
+              title: Center(
+                child: Text('Catálogo'),
+              )
+          ),
           body: Container(
             child: Column(
               mainAxisSize: MainAxisSize.max,

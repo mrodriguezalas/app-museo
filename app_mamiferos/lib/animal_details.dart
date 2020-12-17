@@ -19,7 +19,7 @@ class AnimalDetails extends StatelessWidget {
       ),
       body: Container(
         width: double.maxFinite,
-        height: 600,
+        height: double.maxFinite,
         padding: EdgeInsets.fromLTRB(12, 12, 12, 12),
             child: ListView(
               children: <Widget>[ Card(
