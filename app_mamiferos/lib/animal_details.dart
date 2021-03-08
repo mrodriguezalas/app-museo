@@ -20,6 +20,12 @@ class AnimalDetails extends StatelessWidget {
       body: Container(
         width: double.maxFinite,
         height: double.maxFinite,
+        decoration: BoxDecoration(
+            image: new DecorationImage(
+                image: new AssetImage('assets/images/background-huellas.png'),
+                fit: BoxFit.cover
+            )
+        ),
         padding: EdgeInsets.fromLTRB(12, 12, 12, 12),
             child: ListView(
               children: <Widget>[ Card(
@@ -40,7 +46,10 @@ class AnimalDetails extends StatelessWidget {
                         child: Text(animalData[index]['texto2'], style: TextStyle(fontSize: 16.0, height: 1.4),),
                       ),
                       Row(children: <Widget>[Expanded(child: Image.asset(animalData[index]['huella'],width: 300, height: 200,))]),
-
+                      Padding(
+                        padding: const EdgeInsets.all(32.0),
+                        child: Text(animalData[index]['texto3'], style: TextStyle(fontSize: 16.0, height: 1.4),),
+                      ),
 
                     ],
                   )
