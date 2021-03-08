@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'animal_details.dart';
 import 'animal_data.dart';
 
 void main() {
@@ -13,6 +14,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+          appBar: AppBar(
+              backgroundColor: Colors.orange,
+              title: Center(
+                child: Text('Catálogo'),
+              )
+          ),
           body: Container(
             child: Column(
               mainAxisSize: MainAxisSize.max,
@@ -25,7 +32,7 @@ class MyApp extends StatelessWidget {
                       itemBuilder: (context, index) {
                         return Container(
                           padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
-                          height: 220,
+                          height: 240,
                           width: double.maxFinite,
                           child: Card(
                             elevation: 5,
@@ -39,20 +46,31 @@ class MyApp extends StatelessWidget {
                                       Padding(
                                         padding:
                                         const EdgeInsets.only(left: 10, top: 5, right: 9),
-                                        child: Column(children: <Widget>[
-                                          animalPhotoFootprint(animalData[index]),
-                                          Row(children: <Widget>[
-                                            animalName(animalData[index]),
-                                            Spacer(),
-                                            arrowIcon(),
+                                        child: Wrap(
+                                          children: <Widget>[ Column(children: <Widget>[
+                                            animalPhotoFootprint(animalData[index]),
+                                            Row(children: <Widget>[
+                                              animalName(animalData[index]),
+                                              Spacer(),
+                                              IconButton(
+                                                  constraints: BoxConstraints(),
+                                                  iconSize: 24,
+                                                  icon: new Icon(Icons.arrow_forward, color: Colors.orange),
+                                                  onPressed: (){
+                                                    Navigator.push(
+                                                      context,
+                                                      MaterialPageRoute(builder: (context) => AnimalDetails(index)),
+                                                    );
+                                                  }
+                                              ),
 
-
-
+                                            ]),
+                                            Row(
+                                              children: <Widget>[scientificName(animalData[index])],
+                                            )
                                           ]),
-                                          Row(
-                                            children: <Widget>[scientificName(animalData[index])],
-                                          )
-                                        ]),
+                                           ]
+                                        ),
                                       ),
                                     ]),
                                   )
@@ -91,15 +109,6 @@ class MyApp extends StatelessWidget {
           style: TextStyle(fontSize: 20),
         ),
       ),
-    );
-  }
-
-  Widget arrowIcon() {
-    return Icon(
-      Icons.arrow_forward,
-      color: Colors.orange,
-      size: 24.0,
-      semanticLabel: 'Text to announce in accessibility modes',
     );
   }
 
