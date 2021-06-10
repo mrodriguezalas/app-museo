@@ -1,4 +1,6 @@
 import 'package:app_mamiferos/catalogo.dart';
+import 'package:app_mamiferos/identificacion.dart';
+import 'package:app_mamiferos/observacion.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -33,20 +35,59 @@ class HomeScreen extends StatelessWidget {
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
-                  Center(
-                    child: RaisedButton(
-                      child: FlatButton(
-                        child: Text('Catalogo'),
-                        onPressed: () {
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                  ButtonBar(
+                    buttonPadding:EdgeInsets.symmetric(
+                        horizontal: 32,
+                        vertical: 16
+                    ),
+                    alignment: MainAxisAlignment.center,
+                    buttonMinWidth: 288,
+                    overflowDirection: VerticalDirection.up,
+                    overflowButtonSpacing: 32,
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      RaisedButton(
+                        child: Text("Observación"),
+                        textColor: Colors.white,
+                        color: Colors.orange,
+                        onPressed: (){
+                          navigateToObservacion(context);
+                        },
+                      ),
+                      RaisedButton(
+                        child: Text("Identificación"),
+                        textColor: Colors.white,
+                        color: Colors.orange,
+                        onPressed: (){
+                          navigateToIdentificacion(context);
+                        },
+                      ),
+                      RaisedButton(
+                        child: Text("Catálogo"),
+                        textColor: Colors.white,
+                        color: Colors.orange,
+                        onPressed: (){
                           navigateToCatalogo(context);
                         },
                       ),
-                    ),
-                  )
+                    ],
+                  ),
+                  ])
                 ])));
   }
 }
 
 Future navigateToCatalogo(context) async {
   Navigator.push(context, MaterialPageRoute(builder: (context) => Catalogo()));
+}
+
+Future navigateToObservacion(context) async {
+  Navigator.push(context, MaterialPageRoute(builder: (context) => Observacion()));
+}
+
+Future navigateToIdentificacion(context) async {
+  Navigator.push(context, MaterialPageRoute(builder: (context) => Identificacion()));
 }
