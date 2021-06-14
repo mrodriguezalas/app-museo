@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
-import 'animal_data.dart';
+import 'data/animal_data.dart';
+import 'model/animal.dart';
 
 class AnimalDetails extends StatelessWidget {
-  final int index;
-  var animalData = AnimalData.getData;
+  final Animal animal;
 
-  AnimalDetails(this.index);
+  AnimalDetails(this.animal);
+
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.orange,
           title: Center(
 
-            child: Text(animalData[index]['nombre']),
+            child: Text(animal.nombre.toString()),
           )
       ),
       body: Container(
@@ -34,21 +36,21 @@ class AnimalDetails extends StatelessWidget {
                     children: <Widget>[
                       Padding(
                         padding: const EdgeInsets.all(32.0),
-                        child: Row(children: <Widget>[Text(animalData[index]['nombreCientifico'], style: TextStyle(fontSize: 24.0),)]),
+                        child: Row(children: <Widget>[Text(animal.nombreCientifico.toString(), style: TextStyle(fontSize: 24.0),)]),
                       ),
                       Padding(
                         padding: const EdgeInsets.all(32),
-                        child: Text(animalData[index]['texto1'], style: TextStyle(fontSize: 16.0, height: 1.4)),
+                        child: Text(animal.texto1.toString(), style: TextStyle(fontSize: 16.0, height: 1.4)),
                       ),
-                      Row(children: <Widget>[ Expanded(child: Image.asset(animalData[index]['imagen'],width: 300, height: 250))]),
+                      Row(children: <Widget>[ Expanded(child: Image.asset(animal.imagen.toString(),width: 300, height: 250))]),
                       Padding(
                         padding: const EdgeInsets.all(32.0),
-                        child: Text(animalData[index]['texto2'], style: TextStyle(fontSize: 16.0, height: 1.4),),
+                        child: Text(animal.texto2.toString(), style: TextStyle(fontSize: 16.0, height: 1.4),),
                       ),
-                      Row(children: <Widget>[Expanded(child: Image.asset(animalData[index]['huella'],width: 300, height: 200,))]),
+                      Row(children: <Widget>[Expanded(child: Image.asset(animal.huella.toString(),width: 300, height: 200,))]),
                       Padding(
                         padding: const EdgeInsets.all(32.0),
-                        child: Text(animalData[index]['texto3'], style: TextStyle(fontSize: 16.0, height: 1.4),),
+                        child: Text(animal.texto3.toString(), style: TextStyle(fontSize: 16.0, height: 1.4),),
                       ),
 
                     ],
