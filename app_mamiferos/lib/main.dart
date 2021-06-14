@@ -81,7 +81,7 @@ class HomeScreen extends StatelessWidget {
 }
 
 Future navigateToCatalogo(context) async {
-  Navigator.push(context, MaterialPageRoute(builder: (context) => Catalogo()));
+  Navigator.push(context, MaterialPageRoute(builder: (context) => FilterCatalogo()));
 }
 
 Future navigateToObservacion(context) async {
