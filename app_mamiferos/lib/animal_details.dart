@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'data/animal_data.dart';
 import 'model/animal.dart';
+import 'package:app_mamiferos/l10n/l10n.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class AnimalDetails extends StatelessWidget {
   final Animal animal;

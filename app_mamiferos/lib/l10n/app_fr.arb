@@ -1,0 +1,9 @@
+{
+    "language": "Français",
+    "helloWorld": "Bonjour le monde!",
+    "home": "Accueil",
+    "catalogue": "Catalogue",
+    "identification": "Outil d'identification",
+    "observation": "Outil d'observation",
+    "searchAnimal": "Trouver un animal"
+}

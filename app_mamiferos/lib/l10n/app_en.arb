@@ -1,0 +1,30 @@
+{
+    "language": "English",
+    "@language":{
+        "description": "The current language"
+    },
+    "helloWorld": "Hello World!",
+    "@helloWord": {
+        "description": "A programmer greeting"
+    },
+    "home": "Home",
+    "@home": {
+        "description": "Home menu"
+    },
+    "catalogue": "Catalogue",
+    "@catalogue": {
+        "description": "Catalogue menu"
+    },
+    "identification": "Identification Tool",
+    "@identification": {
+        "description": "The footprint identification tool"
+    },
+    "observation": "Observation Tool",
+    "@observation": {
+        "description": "Observation and animal sight tool"
+    },
+    "searchAnimal": "Search animal",
+    "@searchAnimal": {
+        "description": "Search animal in catalogue screen"
+    }
+}

@@ -1,8 +1,12 @@
+import 'package:app_mamiferos/l10n/l10n.dart';
 import 'package:flutter/material.dart';
 import 'animal_details.dart';
 import 'model/animal.dart';
 import 'data/animal_data.dart';
 import 'widget/search_widget.dart';
+import 'package:app_mamiferos/l10n/l10n.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class FilterCatalogo extends StatefulWidget{
 
@@ -33,7 +37,8 @@ class CatalogoState extends State<FilterCatalogo> {
               //actions: [IconButton(icon: Icon(Icons.search), color: Colors.white, onPressed: null)],
               title:
               Center(
-                child: Text('Catálogo'),
+                child: Text(
+                  AppLocalizations.of(context)!.catalogue),
               ),
             leading: IconButton(icon: Icon(Icons.arrow_back),
             onPressed: () => Navigator.pop(context, false)),
@@ -64,12 +69,19 @@ class CatalogoState extends State<FilterCatalogo> {
               ],
             ),
           )),
+      supportedLocales: L10n.all,
+      localizationsDelegates: [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
     );
   }
 
   Widget buildSearch() => SearchWidget(
     text: query,
-    hintText: 'Buscar animal',
+    hintText: AppLocalizations.of(context)!.searchAnimal,
     onChanged: searchAnimal,
   );
 

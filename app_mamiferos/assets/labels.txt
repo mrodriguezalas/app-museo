@@ -1,0 +1,3 @@
+0 Ocelote
+1 Venado cola blanca
+2 Mapache

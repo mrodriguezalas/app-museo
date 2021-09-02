@@ -14,6 +14,12 @@
 	<string>app_mamiferos</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Get image from camera to use in-app Image Identification tool</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+    <string>Get image from library to use in-app Image Identification tool</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>Get image from library to use in-app Image Identification tool</string>
 	<key>CFBundleShortVersionString</key>
 	<string>$(FLUTTER_BUILD_NAME)</string>
 	<key>CFBundleSignature</key>
