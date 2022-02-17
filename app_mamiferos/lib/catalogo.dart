@@ -7,6 +7,7 @@ import 'widget/search_widget.dart';
 import 'package:app_mamiferos/l10n/l10n.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'dart:io';
 
 class FilterCatalogo extends StatefulWidget{
 
@@ -18,6 +19,7 @@ class CatalogoState extends State<FilterCatalogo> {
   // This widget is the root of your application.
   late List<Animal> animals;
   String query = '';
+  late String defaultLocale = Platform.localeName;
 
 
   @override

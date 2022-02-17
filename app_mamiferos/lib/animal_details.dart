@@ -40,7 +40,7 @@ class AnimalDetails extends StatelessWidget {
                     children: <Widget>[
                       Padding(
                         padding: const EdgeInsets.all(32.0),
-                        child: Row(children: <Widget>[Text(animal.nombreCientifico.toString(), style: TextStyle(fontSize: 24.0),)]),
+                        child: Wrap(children: <Widget>[Text(animal.nombreCientifico.toString(), style: TextStyle(fontSize: 24.0),)]),
                       ),
                       Padding(
                         padding: const EdgeInsets.all(32),

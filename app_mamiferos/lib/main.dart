@@ -69,7 +69,9 @@ class HomeScreen extends StatelessWidget {
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       RaisedButton.icon(
-                        label: Text('Donate now'),
+                        label: Text(
+                            AppLocalizations.of(context)!.links
+                        ),
                         padding: EdgeInsets.all(8.0),
                         textColor: Colors.white,
                         color: Colors.orange,

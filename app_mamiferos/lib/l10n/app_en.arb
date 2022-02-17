@@ -26,5 +26,9 @@
     "searchAnimal": "Search animal",
     "@searchAnimal": {
         "description": "Search animal in catalogue screen"
+    },
+    "links" : "Other links",
+    "@links": {
+        "description": "Othe useful links to the website and free resources"
     }
 }

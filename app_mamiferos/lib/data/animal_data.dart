@@ -2,6 +2,146 @@ import 'package:flutter/material.dart';
 import 'package:app_mamiferos/model/animal.dart';
 
 final allAnimals = <Animal>[
+  Animal(
+      id : 1,
+      nombre : 'Zorro Pelón - Zarigüeya',
+      nombreCientifico : 'Didelphis marsupialis',
+      imagen : 'assets/images/1_Didelphis marsupialis TDL Lisa Sanchez Aguilar - escaneo para Museo Nacional de Costa Rica 300dpi.webp',
+      huella : 'assets/images/1_Huellas Escaneos11 Didelphis marsupialis - zorro pelon.webp',
+      texto1 : 'Es del grupo de los llamados zorros en Costa Rica, aunque es una familia distinta del zorro europeo. Esta es la más conocida, aunque no habite a zonas muy altas por el momento.',
+      texto2 : 'Huellas como si estuviera midiendo cuartas, dedos extendidos.',
+      texto3 : 'Pata delantera 2.5-4 cm x 4.5-6 cm. Pata trasera 3-4 cm x 5-7 cm.'
+  ),
+  Animal(
+      id : 2,
+      nombre : 'Zorro cuatro ojos',
+      nombreCientifico : 'Philander opossum',
+      imagen : 'assets/images/2_Philander opossum TDL Lisa Sanchez Aguilar - escaneo para Museo Nacional de Costa Rica 300dpi.webp',
+      huella : 'assets/images/2_Huellas Escaneos25 Philander opossum - zorro de cuatro ojos.webp',
+      texto1 : 'Es un zorro o zarigüeya de color oscuro con un par de manchas en la cara arriba de los ojos. Es uno de los zorros más frecuentes en las áreas silvestres protegidas.',
+      texto2 : 'Huellas como si estuviera midiendo cuartas, dedos extendidos.',
+      texto3 : 'Pata delantera 2.5-3.5 cm x 3.5-4.5 cm. Pata trasera 3-4 cm x 4.5-5.5 cm.'
+  ),
+  Animal(
+      id : 3,
+      nombre : 'Zorro de agua',
+      nombreCientifico : 'Chironectes minimus',
+      imagen : 'assets/images/3_Chironectes minimus TDL Lisa Sanchez Aguilar - escaneo para Museo Nacional de Costa Rica 300dpi.webp',
+      huella : 'assets/images/3_Huellas Escaneos05 Chironetes minimus - zorro de agua.webp',
+      texto1 : 'Un zorro adaptado a la vida acuática.',
+      texto2 : 'Huellas que muestran las patas con membranas entre los dedos.',
+      texto3 : 'Pata delantera 2-2.5 cm x 3-4 cm. Pata trasera 2.5-6 cm x 5-6 cm.'
+  ),
+  Animal(
+      id : 4,
+      nombre : 'Zorro de balsa',
+      nombreCientifico : 'Caluromys derbianus',
+      imagen : 'assets/images/4_Caluromys derbianus TDL Lisa Sanchez Aguilar - escaneo para Museo Nacional de Costa Rica 300dpi.webp',
+      huella : 'assets/images/4_Huellas Escaneos03 Caluromys derbianus - zorro de balsa - zarigueya lanuda.webp',
+      texto1 : 'También llamado Zorro de agua. Un zorro de color café dorado. Más fácil de encontrar en los árboles.',
+      texto2 : 'Huellas como si estuviera midiendo cuartas, dedos extendidos, es una especie muy arborícola por lo que es difícil encontrar sus huellas.',
+      texto3 : 'Pata delantera 2.5 cm x 4 cm. Pata trasera 2.5 cm x 4.5 cm.'
+  ),
+  Animal(
+      id : 5,
+      nombre : 'Oso Colmenero',
+      nombreCientifico : 'Tamandua mexicana',
+      imagen : 'assets/images/5_Tamandua mexicana TDL Lisa Sanchez Aguilar - escaneo para Museo Nacional de Costa Rica 300dpi.webp',
+      huella : 'assets/images/5_Huellas Escaneos32 Tamandua mexicana - oso colmenero - oso mielero - oso chaleco.webp',
+      texto1 : 'Tamandua mexicana, Oso Colmenero, Oso Mielero u Oso Chaleco. Un oso hormiguero con una característica coloración en el cuerpo que se parece a un chaleco oscuro. Esta especie se encuentra tanto en las ramas altas como en el suelo del bosque.',
+      texto2 : 'Pata delantera será muy diferente a la trasera, pues se nota como un gran cojinete con una gran uña curva a la par. Pata trasera es más común presentando 5 dedos.',
+      texto3 : 'Pata delantera 5 cm x 6 cm. Pata trasera 5 cm x 7 cm.'
+  ),
+  Animal(
+      id : 6,
+      nombre : 'Tapacara',
+      nombreCientifico : 'Cyclopes didactylus',
+      imagen : 'assets/images/6_Cyclopes-didactylus-TDL-Lisa-Sanchez-Aguilar-escaneo-para-Museo-Nacional-de-Costa-Rica-300dpi.webp',
+      huella : 'assets/images/6_Huellas-Escaneos08-Cyclopes-didactylus-serafin-del-platanar-ceibita-tapacara.webp',
+      texto1 : 'Serafín del Platanar, Ceibita. El más pequeño de los osos hormigueros, de un color café dorado. Sobre todo zonas bajas.',
+      texto2 : 'Huellas similares a Tamandua mexicana pero de mucho menor tamaño, aunque será difícil hallarlas por su tamaño y por ser especie muy arborícola.',
+      texto3 : 'Similares a Tamandua mexicana pero mucho menor tamaño.'
+  ),
+  Animal(
+      id : 7,
+      nombre : 'Oso hormiguero gigante',
+      nombreCientifico : 'Myrmecophaga tridactyla',
+      imagen : 'assets/images/7_Myrmecophaga trydactila TDL Lisa Sanchez Aguilar.webp',
+      huella : 'assets/images/7_Huellas Escaneos20 Myrmecophaga tridactyla - oso caballo - oso hormiguero gigante.webp',
+      texto1 : 'Oso caballo. Muy raro, es el oso hormiguero más grande del país. ',
+      texto2 : 'Huellas similares a Tamandua mexicana pero de mayor tamaño.',
+      texto3 : 'Similares a Tamandua mexicana pero mayor tamaño.'
+  ),
+  Animal(
+      id : 8,
+      nombre : 'Armadillo o Cusuco',
+      nombreCientifico : '8.	Dasypus novemcinctus',
+      imagen : 'assets/images/8_Dasypus novemcinctus TDL Lisa Sanchez Aguilar.webp',
+      huella : 'assets/images/8_Huellas Escaneos10 Dasypus novemcinctus - armadillo - cusuco.webp',
+      texto1 : 'Presenta un característico caparazón, por lo que es fácil de identificar. Especie muy adaptable, se pueden encontrar en muchos tipos de hábitat. Puede llegar a zonas altas como Prusia, Irazú.',
+      texto2 : 'Huellas más frecuentemente se les notarán 3 dedos. Pero su uña será gruesa y sobresaliente. En algunos casos si el terreno es muy blando se notará dedos adicionales atrás y quizás hasta la marca de la cola en medio de dos huellas.',
+      texto3 : 'Pata delantera 2 cm x 3 cm. Pata trasera 4 cm x 5 cm.'
+  ),
+  Animal(
+      id : 9,
+      nombre : 'Guatuza o Cherenga',
+      nombreCientifico : 'Dasyprocta punctata',
+      imagen : 'assets/images/9_Dasyprocta punctata TDL Lisa Sanchez Aguilar.webp',
+      huella : 'assets/images/9_Huellas Escaneos09 Dasyprocta punctata.webp',
+      texto1 : 'Un gran roedor terrestre de color café dorado, con orejas muy pequeñas y cola poco visible. Actualmente se ha registrado en zonas tan altas como Barva.',
+      texto2 : 'Huellas más frecuentemente se les notarán 3 dedos. Pero se verán más delgados que los del armadillo y su uña no será tan gruesa o sobresaliente.',
+      texto3 : 'Pata delantera 3 cm x 3.5 cm. Pata trasera 3.5 cm x 4.5 cm.'
+  ),
+  Animal(
+      id : 10,
+      nombre : 'Tepezcuintle',
+      nombreCientifico : 'Cuniculus paca',
+      imagen : 'assets/images/10_Cuniculus paca TDL Lisa Sanchez Aguilar.webp',
+      huella : 'assets/images/10_Huellas Escaneos07 Cuniculus paca - tepezcuintle.webp',
+      texto1 : 'Gran roedor, principalmente nocturno y con manchas claras en los costados del cuerpo. Zonas bajas y medias sobre todo.',
+      texto2 : 'Huellas más frecuentemente se les notarán 3 dedos. Pero sus dedos se verán gruesos y con uñas no tan grandes como en el armadillo.',
+      texto3 : 'Pata delantera 4 cm x 4 cm. Pata trasera 4.5 cm x 5.5 cm.'
+  ),
+  Animal(
+      id : 11,
+      nombre : 'Puercoespín Neotropical',
+      nombreCientifico : 'Sphiggurus mexicanus',
+      imagen : 'assets/images/11_Sphiggurus mexicanus TDL Lisa Sanchez Aguilar.webp',
+      huella : 'assets/images/11_Huellas Escaneos30 Sphiggurus mexicanus - puercoespin neotropical.webp',
+      texto1 : 'Gran roedor de color oscuro con espinas amarillentas, cola larga y no se le notan orejas. Aunque es muy arborícola, también se encontrará caminando por el suelo.',
+      texto2 : 'Huellas se ven como cojinetes grandes, ovalados, con pequeñas uñas sobresaliendo. ',
+      texto3 : 'Pata delantera 3 cm x 5 cm. Pata trasera 4 cm x 7 cm.'
+  ),
+  Animal(
+      id : 12,
+      nombre : 'Conejo de monte',
+      nombreCientifico : 'Sylvilagus gabbi',
+      imagen : 'assets/images/12_Sylvilagus gabbii TDL Lisa Sanchez Aguilar.webp',
+      huella : 'assets/images/12_Huellas Escaneos31 Sylvilagus brasiliensis - conejo de monte.webp',
+      texto1 : 'Este conejo, como otros similares, presenta las típicas orejas sobresalientes y cola muy corta.',
+      texto2 : 'Huellas muy redondeadas u ovaladas, dedos y uñas son poco sobresalientes. Sus rastros se podrán encontrar en áreas abiertas o senderos.',
+      texto3 : 'Pata delantera 2 cm x 3 cm. Pata trasera 3 cm x 5 cm.'
+  ),
+  Animal(
+      id : 13,
+      nombre : 'Coyote',
+      nombreCientifico : 'Canis latrans',
+      imagen : 'assets/images/13_Canis latrans TDL Lisa Sanchez Aguilar.webp',
+      huella : 'assets/images/13_Huellas Escaneos04 Canis latrans - coyote.webp',
+      texto1 : 'Similar en forma a un perro policía, el coyote presenta orejas puntiagudas y cola larga y peluda. Muy frecuentes sus rastros en áreas como Irazú, Zona Protector Toro Chayote o el bosque El Niño.',
+      texto2 : 'Típicas huellas como de perro, de las que será difícil de distinguir en áreas donde deambulan perros domésticos o cimarrones. Generalmente se marcarán uñas (aunque en terrenos duros tal vez no tanto) y un cojinete triangular. A menudo en la huella se podrá dibujar una X entre los dedos y el cojinete sin que los toque mucho. Sobre todo, se encontrarán en áreas abiertas, senderos y similares.',
+      texto3 : 'Pata delantera 5 cm x 6 cm. Pata trasera 4 cm x 5.5 cm.'
+  ),
+  Animal(
+      id : 14,
+      nombre : 'Zorro Grís o Tigrillo',
+      nombreCientifico : 'Urocyon cinereoargenteus',
+      imagen : 'assets/images/14_Urocyon cinereoargenteus TDL Lisa Sanchez Aguilar.webp',
+      huella : 'assets/images/14_Huellas Escaneos35 Urocyon cinereoargenteus - zorra gris - tigrillo.webp',
+      texto1 : 'Este pequeño familiar del coyote presenta color gris en la mayoría del cuerpo y tonos de café naranja. ',
+      texto2 : 'Huellas similares a perro o coyote, pero más pequeñas y no siempre se marcan las uñas.',
+      texto3 : 'Pata delantera 2.5-4 cm x 3-4.5 cm. Pata trasera 2-3 cm x 2.5-4 cm.'
+  ),
     Animal(
       id : 15,
       nombre : 'Manigordo - Ocelote',
