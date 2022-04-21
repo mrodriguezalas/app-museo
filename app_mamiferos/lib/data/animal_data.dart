@@ -10,7 +10,8 @@ final allAnimals = <Animal>[
       huella : 'assets/images/1_Huellas Escaneos11 Didelphis marsupialis - zorro pelon.webp',
       texto1 : 'Es del grupo de los llamados zorros en Costa Rica, aunque es una familia distinta del zorro europeo. Esta es la más conocida, aunque no habite a zonas muy altas por el momento.',
       texto2 : 'Huellas como si estuviera midiendo cuartas, dedos extendidos.',
-      texto3 : 'Pata delantera 2.5-4 cm x 4.5-6 cm. Pata trasera 3-4 cm x 5-7 cm.'
+      texto3 : 'Pata delantera 2.5-4 cm x 4.5-6 cm. Pata trasera 3-4 cm x 5-7 cm.',
+      categoria: 'Zorros'
   ),
   Animal(
       id : 2,
@@ -20,7 +21,8 @@ final allAnimals = <Animal>[
       huella : 'assets/images/2_Huellas Escaneos25 Philander opossum - zorro de cuatro ojos.webp',
       texto1 : 'Es un zorro o zarigüeya de color oscuro con un par de manchas en la cara arriba de los ojos. Es uno de los zorros más frecuentes en las áreas silvestres protegidas.',
       texto2 : 'Huellas como si estuviera midiendo cuartas, dedos extendidos.',
-      texto3 : 'Pata delantera 2.5-3.5 cm x 3.5-4.5 cm. Pata trasera 3-4 cm x 4.5-5.5 cm.'
+      texto3 : 'Pata delantera 2.5-3.5 cm x 3.5-4.5 cm. Pata trasera 3-4 cm x 4.5-5.5 cm.',
+      categoria: 'Zorros'
   ),
   Animal(
       id : 3,
@@ -30,7 +32,8 @@ final allAnimals = <Animal>[
       huella : 'assets/images/3_Huellas Escaneos05 Chironetes minimus - zorro de agua.webp',
       texto1 : 'Un zorro adaptado a la vida acuática.',
       texto2 : 'Huellas que muestran las patas con membranas entre los dedos.',
-      texto3 : 'Pata delantera 2-2.5 cm x 3-4 cm. Pata trasera 2.5-6 cm x 5-6 cm.'
+      texto3 : 'Pata delantera 2-2.5 cm x 3-4 cm. Pata trasera 2.5-6 cm x 5-6 cm.',
+      categoria: 'Zorros'
   ),
   Animal(
       id : 4,
@@ -40,7 +43,8 @@ final allAnimals = <Animal>[
       huella : 'assets/images/4_Huellas Escaneos03 Caluromys derbianus - zorro de balsa - zarigueya lanuda.webp',
       texto1 : 'También llamado Zorro de agua. Un zorro de color café dorado. Más fácil de encontrar en los árboles.',
       texto2 : 'Huellas como si estuviera midiendo cuartas, dedos extendidos, es una especie muy arborícola por lo que es difícil encontrar sus huellas.',
-      texto3 : 'Pata delantera 2.5 cm x 4 cm. Pata trasera 2.5 cm x 4.5 cm.'
+      texto3 : 'Pata delantera 2.5 cm x 4 cm. Pata trasera 2.5 cm x 4.5 cm.',
+      categoria: 'Zorros'
   ),
   Animal(
       id : 5,
@@ -50,7 +54,8 @@ final allAnimals = <Animal>[
       huella : 'assets/images/5_Huellas Escaneos32 Tamandua mexicana - oso colmenero - oso mielero - oso chaleco.webp',
       texto1 : 'Tamandua mexicana, Oso Colmenero, Oso Mielero u Oso Chaleco. Un oso hormiguero con una característica coloración en el cuerpo que se parece a un chaleco oscuro. Esta especie se encuentra tanto en las ramas altas como en el suelo del bosque.',
       texto2 : 'Pata delantera será muy diferente a la trasera, pues se nota como un gran cojinete con una gran uña curva a la par. Pata trasera es más común presentando 5 dedos.',
-      texto3 : 'Pata delantera 5 cm x 6 cm. Pata trasera 5 cm x 7 cm.'
+      texto3 : 'Pata delantera 5 cm x 6 cm. Pata trasera 5 cm x 7 cm.',
+      categoria: 'Osos hormigueros'
   ),
   Animal(
       id : 6,
@@ -60,7 +65,8 @@ final allAnimals = <Animal>[
       huella : 'assets/images/6_Huellas-Escaneos08-Cyclopes-didactylus-serafin-del-platanar-ceibita-tapacara.webp',
       texto1 : 'Serafín del Platanar, Ceibita. El más pequeño de los osos hormigueros, de un color café dorado. Sobre todo zonas bajas.',
       texto2 : 'Huellas similares a Tamandua mexicana pero de mucho menor tamaño, aunque será difícil hallarlas por su tamaño y por ser especie muy arborícola.',
-      texto3 : 'Similares a Tamandua mexicana pero mucho menor tamaño.'
+      texto3 : 'Similares a Tamandua mexicana pero mucho menor tamaño.',
+      categoria: 'Osos hormigueros'
   ),
   Animal(
       id : 7,
@@ -70,7 +76,8 @@ final allAnimals = <Animal>[
       huella : 'assets/images/7_Huellas Escaneos20 Myrmecophaga tridactyla - oso caballo - oso hormiguero gigante.webp',
       texto1 : 'Oso caballo. Muy raro, es el oso hormiguero más grande del país. ',
       texto2 : 'Huellas similares a Tamandua mexicana pero de mayor tamaño.',
-      texto3 : 'Similares a Tamandua mexicana pero mayor tamaño.'
+      texto3 : 'Similares a Tamandua mexicana pero mayor tamaño.',
+      categoria: 'Osos hormigueros'
   ),
   Animal(
       id : 8,
@@ -80,7 +87,8 @@ final allAnimals = <Animal>[
       huella : 'assets/images/8_Huellas Escaneos10 Dasypus novemcinctus - armadillo - cusuco.webp',
       texto1 : 'Presenta un característico caparazón, por lo que es fácil de identificar. Especie muy adaptable, se pueden encontrar en muchos tipos de hábitat. Puede llegar a zonas altas como Prusia, Irazú.',
       texto2 : 'Huellas más frecuentemente se les notarán 3 dedos. Pero su uña será gruesa y sobresaliente. En algunos casos si el terreno es muy blando se notará dedos adicionales atrás y quizás hasta la marca de la cola en medio de dos huellas.',
-      texto3 : 'Pata delantera 2 cm x 3 cm. Pata trasera 4 cm x 5 cm.'
+      texto3 : 'Pata delantera 2 cm x 3 cm. Pata trasera 4 cm x 5 cm.',
+      categoria: 'Armadillos, roedores y conejos'
   ),
   Animal(
       id : 9,
@@ -90,7 +98,8 @@ final allAnimals = <Animal>[
       huella : 'assets/images/9_Huellas Escaneos09 Dasyprocta punctata.webp',
       texto1 : 'Un gran roedor terrestre de color café dorado, con orejas muy pequeñas y cola poco visible. Actualmente se ha registrado en zonas tan altas como Barva.',
       texto2 : 'Huellas más frecuentemente se les notarán 3 dedos. Pero se verán más delgados que los del armadillo y su uña no será tan gruesa o sobresaliente.',
-      texto3 : 'Pata delantera 3 cm x 3.5 cm. Pata trasera 3.5 cm x 4.5 cm.'
+      texto3 : 'Pata delantera 3 cm x 3.5 cm. Pata trasera 3.5 cm x 4.5 cm.',
+      categoria: 'Armadillos, roedores y conejos'
   ),
   Animal(
       id : 10,
@@ -100,7 +109,8 @@ final allAnimals = <Animal>[
       huella : 'assets/images/10_Huellas Escaneos07 Cuniculus paca - tepezcuintle.webp',
       texto1 : 'Gran roedor, principalmente nocturno y con manchas claras en los costados del cuerpo. Zonas bajas y medias sobre todo.',
       texto2 : 'Huellas más frecuentemente se les notarán 3 dedos. Pero sus dedos se verán gruesos y con uñas no tan grandes como en el armadillo.',
-      texto3 : 'Pata delantera 4 cm x 4 cm. Pata trasera 4.5 cm x 5.5 cm.'
+      texto3 : 'Pata delantera 4 cm x 4 cm. Pata trasera 4.5 cm x 5.5 cm.',
+      categoria: 'Armadillos, roedores y conejos'
   ),
   Animal(
       id : 11,
@@ -110,7 +120,8 @@ final allAnimals = <Animal>[
       huella : 'assets/images/11_Huellas Escaneos30 Sphiggurus mexicanus - puercoespin neotropical.webp',
       texto1 : 'Gran roedor de color oscuro con espinas amarillentas, cola larga y no se le notan orejas. Aunque es muy arborícola, también se encontrará caminando por el suelo.',
       texto2 : 'Huellas se ven como cojinetes grandes, ovalados, con pequeñas uñas sobresaliendo. ',
-      texto3 : 'Pata delantera 3 cm x 5 cm. Pata trasera 4 cm x 7 cm.'
+      texto3 : 'Pata delantera 3 cm x 5 cm. Pata trasera 4 cm x 7 cm.',
+      categoria: 'Armadillos, roedores y conejos'
   ),
   Animal(
       id : 12,
@@ -120,7 +131,8 @@ final allAnimals = <Animal>[
       huella : 'assets/images/12_Huellas Escaneos31 Sylvilagus brasiliensis - conejo de monte.webp',
       texto1 : 'Este conejo, como otros similares, presenta las típicas orejas sobresalientes y cola muy corta.',
       texto2 : 'Huellas muy redondeadas u ovaladas, dedos y uñas son poco sobresalientes. Sus rastros se podrán encontrar en áreas abiertas o senderos.',
-      texto3 : 'Pata delantera 2 cm x 3 cm. Pata trasera 3 cm x 5 cm.'
+      texto3 : 'Pata delantera 2 cm x 3 cm. Pata trasera 3 cm x 5 cm.',
+      categoria: 'Armadillos, roedores y conejos'
   ),
   Animal(
       id : 13,
@@ -130,7 +142,8 @@ final allAnimals = <Animal>[
       huella : 'assets/images/13_Huellas Escaneos04 Canis latrans - coyote.webp',
       texto1 : 'Similar en forma a un perro policía, el coyote presenta orejas puntiagudas y cola larga y peluda. Muy frecuentes sus rastros en áreas como Irazú, Zona Protector Toro Chayote o el bosque El Niño.',
       texto2 : 'Típicas huellas como de perro, de las que será difícil de distinguir en áreas donde deambulan perros domésticos o cimarrones. Generalmente se marcarán uñas (aunque en terrenos duros tal vez no tanto) y un cojinete triangular. A menudo en la huella se podrá dibujar una X entre los dedos y el cojinete sin que los toque mucho. Sobre todo, se encontrarán en áreas abiertas, senderos y similares.',
-      texto3 : 'Pata delantera 5 cm x 6 cm. Pata trasera 4 cm x 5.5 cm.'
+      texto3 : 'Pata delantera 5 cm x 6 cm. Pata trasera 4 cm x 5.5 cm.',
+      categoria: 'Cánidos y felinos'
   ),
   Animal(
       id : 14,
@@ -140,7 +153,8 @@ final allAnimals = <Animal>[
       huella : 'assets/images/14_Huellas Escaneos35 Urocyon cinereoargenteus - zorra gris - tigrillo.webp',
       texto1 : 'Este pequeño familiar del coyote presenta color gris en la mayoría del cuerpo y tonos de café naranja. ',
       texto2 : 'Huellas similares a perro o coyote, pero más pequeñas y no siempre se marcan las uñas.',
-      texto3 : 'Pata delantera 2.5-4 cm x 3-4.5 cm. Pata trasera 2-3 cm x 2.5-4 cm.'
+      texto3 : 'Pata delantera 2.5-4 cm x 3-4.5 cm. Pata trasera 2-3 cm x 2.5-4 cm.',
+      categoria: 'Cánidos y felinos'
   ),
     Animal(
       id : 15,
@@ -150,7 +164,8 @@ final allAnimals = <Animal>[
       huella : 'assets/images/15_Huellas Escaneos14 Leopardus pardalis - manigordo - ocelote.webp',
       texto1 : 'Este gato silvestre es de tamaño mediano, con una cola proporcionalmente corta y con manchas variables pero que en los costados suelen ser alargadas. ',
       texto2 : 'Huellas tipo felino, suelen ser intermedias entre los felinos más grandes y los pequeños felinos.',
-      texto3 : 'Pata delantera 4.5 cm x 5 cm. Pata trasera 4 cm x 4 cm.'
+      texto3 : 'Pata delantera 4.5 cm x 5 cm. Pata trasera 4 cm x 4 cm.',
+      categoria: 'Cánidos y felinos'
     ),
     Animal(
       id : 16,
@@ -160,7 +175,8 @@ final allAnimals = <Animal>[
       huella : 'assets/images/16_Huellas Escaneos16 Leopardus wiedii - tigrillo - caucel - margay.webp',
       texto1 : 'Felino de menor tamaño que el manigordo, con cola proporcionalmente larga, ojos grandes y manchas variables. Especie que a menudo utiliza mucho los árboles. Ha sido visto en senderos en Monumento Nacional Guayabo.',
       texto2 : 'Huellas tipo felino, pequeñas.',
-      texto3 : 'Pata delantera 3 cm x 4 cm. Pata trasera 3 cm x 3 cm.'
+      texto3 : 'Pata delantera 3 cm x 4 cm. Pata trasera 3 cm x 3 cm.',
+      categoria: 'Cánidos y felinos'
     ),
     Animal(
       id : 17,
@@ -170,7 +186,8 @@ final allAnimals = <Animal>[
       huella : 'assets/images/17_Huellas Escaneos15 Leopardus tigrinus.webp',
       texto1 : 'El felino más pequeño de Costa Rica, con manchas variables que suelen ser oscuras y pequeñas. Especie que al parecer, es más frecuente en tierras altas.',
       texto2 : 'Huellas tipo felino, pequeñas.',
-      texto3 : 'Pata delantera 2.5 cm x 2.8 cm aprox. Pata trasera 2.5 cm x 2.5 cm aprox.'
+      texto3 : 'Pata delantera 2.5 cm x 2.8 cm aprox. Pata trasera 2.5 cm x 2.5 cm aprox.',
+      categoria: 'Cánidos y felinos'
     ),
   Animal(
       id : 18,
@@ -180,7 +197,8 @@ final allAnimals = <Animal>[
       huella : 'assets/images/18_Huellas Escaneos29 Puma yagouaroundi.webp',
       texto1 : 'Felino pequeño de color oscuro, sin manchas.',
       texto2 : 'Huellas tipo felino, pequeñas.',
-      texto3 : 'Pata delantera 3.5 cm x 3.5 cm. Pata trasera 4 cm x 4 cm.'
+      texto3 : 'Pata delantera 3.5 cm x 3.5 cm. Pata trasera 4 cm x 4 cm.',
+      categoria: 'Cánidos y felinos'
     ),
   Animal(
       id : 19,
@@ -190,7 +208,8 @@ final allAnimals = <Animal>[
       huella : 'assets/images/19_Huellas Escaneos28 Puma concolor - puma.webp',
       texto1 : 'Gran felino de color café sin manchas, con tonos de color claro en la cara y vientre. ',
       texto2 : 'Huellas tipo felino, grandes, un gran cojinete, dedos alargados y con cierta punta, no tan redondeados como los del jaguar. Cojinete tendrá 2 lóbulos sobresalientes arriba y 3 abajo.',
-      texto3 : 'Pata delantera 7 cm x 7 cm. Pata trasera 7 cm x 8 cm.'
+      texto3 : 'Pata delantera 7 cm x 7 cm. Pata trasera 7 cm x 8 cm.',
+      categoria: 'Cánidos y felinos'
     ),
   Animal(
       id : 20,
@@ -200,7 +219,8 @@ final allAnimals = <Animal>[
       huella : 'assets/images/20_Huellas Escaneos23 Panthera onca - jaguar.webp',
       texto1 : 'Gran felino con cabeza grande y manchas tipo roseta con alguna pinta adentro.',
       texto2 : 'Huellas tipo felino, grandes, un gran cojinete, dedos redondeados. Cojinete tendrá 2 lóbulos sobresalientes abajo y arriba no tendrá.',
-      texto3 : 'Pata delantera 8 cm x 8 cm. Pata trasera 7 cm x 8 cm.'
+      texto3 : 'Pata delantera 8 cm x 8 cm. Pata trasera 7 cm x 8 cm.',
+      categoria: 'Cánidos y felinos'
     ),
   Animal(
       id : 21,
@@ -210,7 +230,8 @@ final allAnimals = <Animal>[
       huella : 'assets/images/21_Huellas Escaneos27 Procyon lotor - mapachin - osito lavador.webp',
       texto1 : 'Mamífero con una característica mancha tipo antifaz en la cara y cola anillada.',
       texto2 : 'Huella con notable planta del pie (plantígrado). Dedos delgados y largos con uñas poco notables. La pata trasera puede presentar toda la planta hasta el talón.',
-      texto3 : 'Pata delantera 5 cm x 5 cm. Pata trasera 5 cm x 4-9 cm.'
+      texto3 : 'Pata delantera 5 cm x 5 cm. Pata trasera 5 cm x 4-9 cm.',
+      categoria: 'Familiares del mapache'
     ),
   Animal(
       id:  22,
@@ -220,7 +241,8 @@ final allAnimals = <Animal>[
       huella : 'assets/images/22_Huellas Escaneos21 Nasua narica - pizote - pizote solo - coati.webp',
       texto1 : 'Familiar del mapache con nariz larga y cola larga, peluda, que a menudo lleva alzada. Hembras y juveniles suelen formar grupos. ',
       texto2 : 'Huella con notable planta del pie (plantígrado). Dedos delgados y alargados con uñas notables.',
-      texto3 : 'Pata delantera 4 cm x 5 cm. Pata trasera 4 cm x 4-7 cm.'
+      texto3 : 'Pata delantera 4 cm x 5 cm. Pata trasera 4 cm x 4-7 cm.',
+      categoria: 'Familiares del mapache'
     ),
   Animal(
       id : 23,
@@ -230,7 +252,8 @@ final allAnimals = <Animal>[
       huella : 'assets/images/23_Huellas Escaneos26 Potos flavus - martilla.webp',
       texto1 : 'Familiar del mapache, pero muy distinto, con color café, orejas redondeadas y con cola que se puede enrollar en ramas como algunos monos. ',
       texto2 : 'Huella con notable planta del pie (plantígrado). Sus rastros serán poco factibles de encontrar por ser muy arborícola.',
-      texto3 : 'Pata delantera 4.5 cm x 5.5 cm. Pata trasera 4 cm x 6.5 cm.'
+      texto3 : 'Pata delantera 4.5 cm x 5.5 cm. Pata trasera 4 cm x 6.5 cm.',
+      categoria: 'Familiares del mapache'
     ),
   Animal(
       id : 24,
@@ -240,7 +263,8 @@ final allAnimals = <Animal>[
       huella : 'assets/images/24_Huellas Escaneos01 Bassariscus sumichrasti - cacomistle - ostoche.webp',
       texto1 : 'Familiar del mapache, con orejas puntiagudas y cola anillada, relativamente frecuente en zonas altas como sector Barva o Prusia, Volcán Irazú.',
       texto2 : 'Huella con notable planta del pie (plantígrado). Sus rastros serán poco factibles de encontrar por ser muy arborícola.',
-      texto3 : 'Pata delantera 3 cm x 3.5 cm. Pata trasera 3 cm x 3 cm.'
+      texto3 : 'Pata delantera 3 cm x 3.5 cm. Pata trasera 3 cm x 3 cm.',
+      categoria: 'Familiares del mapache'
     ),
   Animal(
       id : 25,
@@ -250,7 +274,8 @@ final allAnimals = <Animal>[
       huella : 'assets/images/25_Huellas Escaneos19 Mustela frenata - comadreja.webp',
       texto1 : 'Pequeño, cuerpo alargado, patas cortas, color café oscuro en dorso, cara con tonos negro y blanco. ',
       texto2 : 'Huellas con dedos con garras y cojinete plantar que en muchos casos se marca con mayor fuerza la parte superior, viéndose angosto a lo ancho, y en algunos casos se notará el resto de la planta del pie un poco menos marcada. ',
-      texto3 : 'Pata delantera 2 cm x 2.5 cm. Pata trasera 2 cm x 2 cm.'
+      texto3 : 'Pata delantera 2 cm x 2.5 cm. Pata trasera 2 cm x 2 cm.',
+      categoria: 'Familiares de la comadreja'
     ),
   Animal(
       id : 26,
@@ -260,7 +285,8 @@ final allAnimals = <Animal>[
       huella : 'assets/images/26_Huellas Escaneos13 Galictis vittata - grisón - hurón.webp',
       texto1 : 'Especie de cola relativamente corta, color gris en dorso, negro abajo y cara con una banda. ',
       texto2 : 'Huellas con dedos con garras y cojinete plantar que en muchos casos se marca con mayor fuerza la parte superior, viéndose angosto a lo ancho, y en algunos casos se notará el resto de la planta del pie un poco menos marcada. En huellas más profundamente marcadas podría notarse membranas interdigitales, pero no tan amplias como en la nutria.',
-      texto3 : 'Pata delantera 4.5 cm x 5.5 cm. Pata trasera 4.5 cm x 5.5 cm.'
+      texto3 : 'Pata delantera 4.5 cm x 5.5 cm. Pata trasera 4.5 cm x 5.5 cm.',
+      categoria: 'Familiares de la comadreja'
     ),
   Animal(
       id : 27,
@@ -270,7 +296,8 @@ final allAnimals = <Animal>[
       huella : 'assets/images/27_Huellas Escaneos12 Eira barbara - tolomuco - cholomuco.webp',
       texto1 : 'Mediano, color negro, cola larga y peluda, a veces se ha confundido con el felino llamado león breñero, pero no es un gato. ',
       texto2 : 'Huellas con dedos con garras y cojinete plantar que en muchos casos se marca con mayor fuerza la parte superior, viéndose angosto a lo ancho, y en algunos casos se notará el resto de la planta del pie un poco menos marcada. ',
-      texto3 : 'Pata delantera 5 cm x 7 cm. Pata trasera 5 cm x 4-8 cm.'
+      texto3 : 'Pata delantera 5 cm x 7 cm. Pata trasera 5 cm x 4-8 cm.',
+      categoria: 'Familiares de la comadreja'
     ),
   Animal(
       id : 28,
@@ -280,7 +307,8 @@ final allAnimals = <Animal>[
       huella : 'assets/images/28_Huellas Escaneos06 Conepatus semistriatus - zorro hediondo.webp',
       texto1 : 'Un zorrillo con su típica coloración de bandas blancas en el dorso sobre fondo negro, cola con mucho blanco. ',
       texto2 : 'Huellas con dedos con garras y cojinete plantar que en muchos casos se marca con mayor fuerza como angosto a lo ancho, y en algunos casos se notará el resto de la planta del pie. Las patas delanteras pueden mostrar garras largas.',
-      texto3 : 'Pata delantera 3 cm x 3 cm. Pata trasera 3 cm x 4.5 cm.'
+      texto3 : 'Pata delantera 3 cm x 3 cm. Pata trasera 3 cm x 4.5 cm.',
+      categoria: 'Familiares de la comadreja'
     ),
   Animal(
       id : 29,
@@ -290,7 +318,8 @@ final allAnimals = <Animal>[
       huella : 'assets/images/29_Huellas Escaneos17 Lontra longicaudis - nutria - perro de agua.webp',
       texto1 : 'Cuerpo alargado y patas cortas, se observa sobre todo en el agua u orillas de ríos o cursos de agua. A veces se podrían encontrar sus excretas sobre troncos o piedras, de débil consistencia y con notables restos de caparazones de crustáceos de río o escamas de peces.',
       texto2 : 'Huellas con dedos con garras y cojinete plantar que en muchos casos se marca con mayor fuerza como angosto a lo ancho, y en algunos casos se nota el resto de la planta del pie. En la pata trasera no se nota el resto de la planta. Se pueden ver membranas interdigitales entre los dedos por ser especie de hábitos muy acuáticos. Rastros sobre todo en orillas y playas arenosas de ríos.',
-      texto3 : 'Pata delantera 6 cm x 7 cm. Pata trasera 8 cm x 8 cm.'
+      texto3 : 'Pata delantera 6 cm x 7 cm. Pata trasera 8 cm x 8 cm.',
+      categoria: 'Familiares de la comadreja'
     ),
   Animal(
       id : 30,
@@ -300,7 +329,8 @@ final allAnimals = <Animal>[
       huella : 'assets/images/30_Tapirusbairdiidantadantotapirmachodemonte.webp',
       texto1 : 'El mamífero silvestre más voluminoso del país, color oscuro, patas fuertes, orejas cortas redondeadas, cola muy corta y una trompa móvil. Las crías muy jóvenes tienen pelaje manchado.',
       texto2 : 'Huella grande, inconfundible, con tres grandes dedos redondeados con pezuñas, en la huella de la pata delantera a veces se podrá notar un cuarto dedo atrás más pequeño. La huella más grande de un mamífero silvestre en Costa Rica.',
-      texto3 : 'Pata delantera 17 cm x 18 cm. Pata trasera 17 cm x 17 cm.'
+      texto3 : 'Pata delantera 17 cm x 18 cm. Pata trasera 17 cm x 17 cm.',
+      categoria: 'Animales de pezuña'
     ),
   Animal(
       id : 31,
@@ -310,7 +340,8 @@ final allAnimals = <Animal>[
       huella : 'assets/images/31_Huellas Escaneos24Pecaritajacusainopecaridecollar.webp',
       texto1 : 'Mamífero con apariencia de cerdo, pelaje oscuro con una banda clara entre los hombros y el cuello. Forman grupos a veces de muchos individuos.',
       texto2 : 'Huellas de 2 pezuñas, más redondeadas y no tan puntiagudas como las de venados. Esta especie está más extendida que el chancho de monte, y la gran mayoría de este tipo de rastros, corresponderán a esta especie.',
-      texto3 : 'Pata delantera 3.5 cm x 4 cm. Pata trasera 3.5 cm x 4 cm.'
+      texto3 : 'Pata delantera 3.5 cm x 4 cm. Pata trasera 3.5 cm x 4 cm.',
+      categoria: 'Animales de pezuña'
     ),
   Animal(
       id : 32,
@@ -320,7 +351,8 @@ final allAnimals = <Animal>[
       huella : 'assets/images/32_HuellasEscaneos34Tayassupecari.webp',
       texto1 : 'Mamífero con apariencia de cerdo, pelaje oscuro con coloración clara en parte de la cara. Forma grupos a veces muy numerosos. ',
       texto2 : 'Huellas de 2 pezuñas, más redondeadas y no tan puntiagudas como las de venados. Esta especie es muy rara, por lo que será poco probable encontrar sus rastros en áreas muy exploradas.',
-      texto3 : 'Pata delantera 5 cm x 5 cm. Pata trasera 5 cm x 5 cm.'
+      texto3 : 'Pata delantera 5 cm x 5 cm. Pata trasera 5 cm x 5 cm.',
+      categoria: 'Animales de pezuña'
     ),
   Animal(
       id : 33,
@@ -330,7 +362,8 @@ final allAnimals = <Animal>[
       huella : 'assets/images/33_HuellasEscaneos18Mazamaamericana.webp',
       texto1 : 'Parecido al venado cola blanca, pero más pequeño y con astas (cachos) no ramificadas (una sola punta) en machos y color más oscuro y rojizo. ',
       texto2 : 'Huellas de 2 pezuñas puntiagudas, es de hábitos más elusivos que el venado cola blanca, encontrándose en bosque adentro y las huellas de este tipo en zonas altas, corresponderán a esta especie.',
-      texto3 : 'Pata delantera 2.5 cm x 3 cm. Pata trasera 2.5 cm x 3 cm.'
+      texto3 : 'Pata delantera 2.5 cm x 3 cm. Pata trasera 2.5 cm x 3 cm.',
+      categoria: 'Animales de pezuña'
     ),
   Animal(
       id : 34,
@@ -340,6 +373,139 @@ final allAnimals = <Animal>[
       huella : 'assets/images/34_HuellasEscaneos22Odocoileusvirginianus-venadocolablanca.webp',
       texto1 : 'El típico venado símbolo nacional, orejas largas, patas largas, cola corta y astas (cachos) ramificadas en los machos. Las crías jóvenes presentan pelaje manchado. Sobre todo en las zonas bajas como La Selva, Sarapiquí.',
       texto2 : 'Huellas de 2 pezuñas puntiagudas. Se verán principalmente en áreas abiertas, senderos, bordes de bosque u otros similares.',
-      texto3 : 'Pata delantera 4 cm x 5.5 cm aprox. Pata trasera 4 cm x 5.5 cm aprox.'
-    )
+      texto3 : 'Pata delantera 4 cm x 5.5 cm aprox. Pata trasera 4 cm x 5.5 cm aprox.',
+      categoria: 'Animales de pezuña'
+    ),
+  Animal(
+      id : 35,
+      nombre : 'Mono congo',
+      nombreCientifico : 'Alouatta palliata',
+      imagen : 'assets/images/35_Alouatta palliata TDL Lisa Sanchez Aguilar.webp',
+      huella : 'assets/images/not-found.webp',
+      texto1 : 'Mono de color mayormente negro, con color amarillento en los costados. Cola prensil. Emite una fuerte vocalización que se oye a gran distancia.',
+      texto2 : 'Normalmente es difícil encontrar huellas de este animal.',
+      texto3 : 'NA',
+      categoria: 'Mamíferos sin huellas frecuentes'
+  ),
+  Animal(
+      id : 36,
+      nombre : 'Mono araña o colorado',
+      nombreCientifico : 'Ateles geoffroyi',
+      imagen : 'assets/images/36_Ateles geoffroyi TDL Lisa Sanchez Aguilar.webp',
+      huella : 'assets/images/not-found.webp',
+      texto1 : 'Mono de brazos y piernas muy alargados. Cola prensil y de gran agilidad. Color variable, pero mayormente pardo rojizo con las extremidades oscuras. Considerada la especie de mono más amenazada por la destrucción de bosques. Más posible de avistar en algunos sectores como El Ceibo, Braulio Carrillo.',
+      texto2 : 'Normalmente es difícil encontrar huellas de este animal.',
+      texto3 : 'NA',
+      categoria: 'Mamíferos sin huellas frecuentes'
+  ),
+  Animal(
+      id : 37,
+      nombre : 'Mono carablanca',
+      nombreCientifico : 'Cebus imitator',
+      imagen : 'assets/images/37_Cebus imitator_TDL Lisa Sanchez Aguilar.webp',
+      huella : 'assets/images/not-found.webp',
+      texto1 : 'Mono de cola prensil, coloración negra con blanco en la cara, pecho, lados de la cabeza y parte de los hombros. Muy extendido, se registra incluso en zonas altas como el volcán Barva.',
+      texto2 : 'Normalmente es difícil encontrar huellas de este animal.',
+      texto3 : 'NA',
+      categoria: 'Mamíferos sin huellas frecuentes'
+  ),
+  Animal(
+      id : 38,
+      nombre : 'Perezoso de dos dedos',
+      nombreCientifico : 'Choloepus hoffmanni',
+      imagen : 'assets/images/38_Choloepus hoffmanni TDL Lisa Sanchez Aguilar.webp',
+      huella : 'assets/images/not-found.webp',
+      texto1 : 'Estos mamíferos que se observan colgando boca arriba son llamados comúnmente pericos ligeros. Su color es un pardo oscuro o amarillento, más claro que el perezoso de 3 dedos. Su hocico en más pronunciado. Presenta en su mano cinco dedos, de los cuales, dos cuentan con las garras que se observan mejor. Llega a zonas de mayor altitud que el otro perezoso. Habita zonas tan cerca de San José como La Carpintera.',
+      texto2 : 'Normalmente es difícil encontrar huellas de este animal.',
+      texto3 : 'NA',
+      categoria: 'Mamíferos sin huellas frecuentes'
+  ),
+  Animal(
+      id : 39,
+      nombre : 'Perezoso de tres dedos',
+      nombreCientifico : 'Bradypus variegatus',
+      imagen : 'assets/images/39_Bradypus variegatus TDL Lisa Sanchez Aguilar.webp',
+      huella : 'assets/images/not-found.webp',
+      texto1 : 'Al igual que el perezoso de dos dedos, se traslada boca arriba. Pero su color es más oscuro, con un pelaje parduzco o gris. El macho posee una mancha color naranja o amarillento en el dorso, con una línea negra central. Muy asociado a los guarumos, aunque puede alimentarse de otras especies vegetales también.',
+      texto2 : 'Normalmente es difícil encontrar huellas de este animal.',
+      texto3 : 'NA',
+      categoria: 'Mamíferos sin huellas frecuentes'
+  ),
+  Animal(
+      id : 40,
+      nombre : 'Ardilla de cola roja',
+      nombreCientifico : 'Sciurus granatensis',
+      imagen : 'assets/images/40_Sciurus granatensis TDL Lisa Sanchez Aguilar.webp',
+      huella : 'assets/images/not-found.webp',
+      texto1 : 'Especie de ardilla color pardo rojizo en el dorso, vientre un poco más claro, con cola café rojizo, no tiene el lomo negro. Muy frecuentes en partes como el sector Prusia del Irazú y el volcán Poás.',
+      texto2 : 'Normalmente es difícil encontrar huellas de este animal.',
+      texto3 : 'NA',
+      categoria: 'Mamíferos sin huellas frecuentes'
+  ),
+  Animal(
+      id : 41,
+      nombre : 'Ardilla variegada',
+      nombreCientifico : 'Sciurus variegatoides',
+      imagen : 'assets/images/41_Sciurus variegatoides TDL Lisa Sanchez Aguilar.webp',
+      huella : 'assets/images/not-found.webp',
+      texto1 : 'Típica ardilla que vemos en los jardines de ciudades con lomo negro y cuerpo café rojizo, aunque varía mucho en otros lugares del país hasta el punto que no nos parecería la misma especie. Factible de ver en Monumento Nacional Guayabo.',
+      texto2 : 'Normalmente es difícil encontrar huellas de este animal.',
+      texto3 : 'NA',
+      categoria: 'Mamíferos sin huellas frecuentes'
+  ),
+  Animal(
+      id : 42,
+      nombre : 'Ardilla enana',
+      nombreCientifico : 'Microsciurus alfari',
+      imagen : 'assets/images/42_Microsciurus alfari TDL Lisa Sanchez Aguilar.webp',
+      huella : 'assets/images/not-found.webp',
+      texto1 : 'Pequeña ardilla de color pardo oscuro, con menos de 30 cms, es la ardilla más pequeña de Costa Rica. Habita principalmente áreas boscosas a diferencia de sus parientes mayores (Sciurus) de áreas más abiertas.',
+      texto2 : 'Normalmente es difícil encontrar huellas de este animal.',
+      texto3 : 'NA',
+      categoria: 'Mamíferos sin huellas frecuentes'
+  ),
+  Animal(
+      id : 43,
+      nombre : 'Ardilla del Poás',
+      nombreCientifico : 'Syntheosciurus brochus',
+      imagen : 'assets/images/43_Syntheosciurus brochus TDL Lisa Sanchez Aguilar.webp',
+      huella : 'assets/images/not-found.webp',
+      texto1 : 'Ardilla difícil de observar al parecer. Su color es pardo rojizo, similar a la ardilla de cola roja, pero sin los tonos rojizos, se describe con orejas pequeñas que no sobresalen sobre la cabeza. Se conoce por ahora solo para el Volcán Poás y el Parque Nacional Tapantí.',
+      texto2 : 'Normalmente es difícil encontrar huellas de este animal.',
+      texto3 : 'NA',
+      categoria: 'Mamíferos sin huellas frecuentes'
+  ),
+  Animal(
+      id : 44,
+      nombre : 'Taltuza',
+      nombreCientifico : 'Heterogeomys heterodus',
+      imagen : 'assets/images/44_Orthogeomys heterodus TDL Lisa Sanchez Aguilar.webp',
+      huella : 'assets/images/44_Orthogeomys sp., Monticulo de actividad. FD.webp',
+      texto1 : 'Roedor de cuerpo rechoncho, cola muy corta, orejas no se notan y grandes uñas para excavar. Color café. Vive principalmente bajo tierra. En las zonas donde habita, a veces es fácil ver los montoncitos de tierra que saca de los huecos que hace. Por ejemplo a veces en Prusia, Irazú.',
+      texto2 : 'Normalmente es difícil encontrar huellas de este animal.',
+      texto3 : 'Montículo de actividad de una Taltuza.',
+      categoria: 'Mamíferos sin huellas frecuentes'
+  ),
+  Animal(
+      id : 45,
+      nombre : 'Olingo',
+      nombreCientifico : 'Bassaricyon gabbi',
+      imagen : 'assets/images/45_Bassaricyon gabbi TDL Lisa Sanchez Aguilar.webp',
+      huella : 'assets/images/not-found.webp',
+      texto1 : 'Familiar de mapache. Es parecido a la martilla, pero su cola no es prensil y es larga, además de ser algo más esbelto. ',
+      texto2 : 'Normalmente es difícil encontrar huellas de este animal.',
+      texto3 : 'NA',
+      categoria: 'Mamíferos sin huellas frecuentes'
+  ),
+  Animal(
+      id : 46,
+      nombre : 'Armadillo de zopilote',
+      nombreCientifico : 'Cabassous centralis',
+      imagen : 'assets/images/46_Cabassous centralis TDL Lisa Sanchez Aguilar.webp',
+      huella : 'assets/images/not-found.webp',
+      texto1 : 'Similar al armadillo o cusuco, pero con un hocico menos puntiagudo, cola más corta, uñas más grandes, además es mucho más raro y de hábitos algo más fosoriales (bajo tierra).',
+      texto2 : 'Normalmente es difícil encontrar huellas de este animal.',
+      texto3 : 'NA',
+      categoria: 'Mamíferos sin huellas frecuentes'
+  ),
   ];

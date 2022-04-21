@@ -7,6 +7,7 @@ class Animal{
   final String texto1;
   final String texto2;
   final String texto3;
+  final String categoria;
 
   const Animal({
     required this.id,
@@ -17,6 +18,7 @@ class Animal{
     required this.texto1,
     required this.texto2,
     required this.texto3,
+    required this.categoria
 });
 
   factory Animal.fromJson(Map<String, dynamic> json) => Animal(
@@ -27,7 +29,8 @@ class Animal{
     huella: json['huella'],
     texto1: json['texto1'],
     texto2: json['texto2'],
-    texto3: json['texto3']
+    texto3: json['texto3'],
+    categoria: json['categoria']
   );
 
   Map<String, dynamic> toJson() =>{
@@ -38,6 +41,7 @@ class Animal{
     'huella': huella,
     'texto1': texto1,
     'texto2': texto2,
-    'texto3': texto3
+    'texto3': texto3,
+    'categoria' : categoria
   };
 }

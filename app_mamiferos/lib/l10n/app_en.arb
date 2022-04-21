@@ -29,6 +29,10 @@
     },
     "links" : "Other links",
     "@links": {
-        "description": "Othe useful links to the website and free resources"
-    }
+        "description": "Other useful links to the website and free resources"
+    },
+    "credits" : "App credits",
+        "@credits": {
+            "description": "Credits for app development, images and text."
+        }
 }
