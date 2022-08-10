@@ -32,8 +32,6 @@ class NotesDatabase{
     await db.execute('''
       CREATE TABLE $tableNotes (
       ${NoteFields.id} $idType,
-      ${NoteFields.isImportant} $boolType,
-      ${NoteFields.number} $integerType,
       ${NoteFields.title} $textType,
       ${NoteFields.description} $textType,
       ${NoteFields.time} $textType,

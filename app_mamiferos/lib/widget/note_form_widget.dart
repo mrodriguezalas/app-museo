@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:geolocator/geolocator.dart';
 
 class NoteFormWidget extends StatelessWidget {
-  final bool? isImportant;
-  final int? number;
   final String? title;
   final String? description;
   final String? paisCantonDistrito;
@@ -24,8 +23,6 @@ class NoteFormWidget extends StatelessWidget {
   final String? familia;
   final String? categoria;
   //Value changed
-  final ValueChanged<bool> onChangedImportant;
-  final ValueChanged<int> onChangedNumber;
   final ValueChanged<String> onChangedTitle;
   final ValueChanged<String> onChangedDescription;
   final ValueChanged<String> onChangepaisCantonDistrito;
@@ -49,8 +46,6 @@ class NoteFormWidget extends StatelessWidget {
 
   const NoteFormWidget({
     Key? key,
-    this.isImportant = false,
-    this.number = 0,
     this.title = '',
     this.description = '',
     this.paisCantonDistrito = '',
@@ -72,8 +67,6 @@ class NoteFormWidget extends StatelessWidget {
     this.familia = '',
     this.categoria = '',
     //on changed variables
-    required this.onChangedImportant,
-    required this.onChangedNumber,
     required this.onChangedTitle,
     required this.onChangedDescription,
     required this.onChangepaisCantonDistrito,
@@ -103,30 +96,14 @@ class NoteFormWidget extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Row(
-            children: [
-              Switch(
-                value: isImportant ?? false,
-                onChanged: onChangedImportant,
-              ),
-              Expanded(
-                child: Slider(
-                  value: (number ?? 0).toDouble(),
-                  min: 0,
-                  max: 5,
-                  divisions: 5,
-                  onChanged: (number) => onChangedNumber(number.toInt()),
-                ),
-              )
-            ],
-          ),
+
           buildTitle(),
           SizedBox(height: 8),
           buildDescription(),
           SizedBox(height: 16),
           buildPaisCantonDistrito(),
           SizedBox(height: 8),
-          buildCoordenadas(),
+          buildCoordenadas(context), //get Coordenadas
           SizedBox(height: 8),
           buildAltitud(),
           SizedBox(height: 8),
@@ -216,7 +193,10 @@ class NoteFormWidget extends StatelessWidget {
     onChanged: onChangepaisCantonDistrito,
   );
 
-  Widget buildCoordenadas() => TextFormField(
+  Widget buildCoordenadas(BuildContext context) => Row(
+    children: [
+    Expanded(
+      child: TextFormField(
     textInputAction: TextInputAction.next,
     maxLines: 1,
     initialValue: coordenadas,
@@ -229,7 +209,76 @@ class NoteFormWidget extends StatelessWidget {
         ? 'Error al obtener coordenadas'
         : null,
     onChanged: onChangeCoordenadas,
+    )),
+      /*Material(
+        child: Center(
+          child: Ink(
+            width: 60.0,
+            height: 60.0,
+            decoration: const ShapeDecoration(
+              color: Colors.orange,
+              shape: BeveledRectangleBorder(),
+            ),
+            child: IconButton(
+          color: Colors.white,
+          icon: const Icon(Icons.location_searching),
+          tooltip: 'Obtener coordenadas',
+          onPressed: () {
+            _updatePosition(context);
+          },
+        ),))
+      )*/
+    ],
   );
+
+  Future<String> _updatePosition(BuildContext context) async {
+
+      Position pos = await _determinePosition(context);
+      debugPrint(pos.latitude.toString() + " " + pos.longitude.toString());
+      return pos.latitude.toString() + " " + pos.longitude.toString();
+  }
+
+
+  Future<Position> _determinePosition(BuildContext context) async {
+    bool serviceEnabled;
+    LocationPermission permission;
+
+    // Test if location services are enabled.
+    serviceEnabled = await Geolocator.isLocationServiceEnabled();
+    if (!serviceEnabled) {
+      // Location services are not enabled don't continue
+      // accessing the position and request users of the
+      // App to enable the location services.
+      const snackBar = SnackBar(content: Text("Por favor revisar permisos de la app y activar localización"));
+      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+      return Future.error('Location services are disabled.');
+    }
+
+    permission = await Geolocator.checkPermission();
+    if (permission == LocationPermission.denied) {
+      permission = await Geolocator.requestPermission();
+      if (permission == LocationPermission.denied) {
+        // Permissions are denied, next time you could try
+        // requesting permissions again (this is also where
+        // Android's shouldShowRequestPermissionRationale
+        // returned true. According to Android guidelines
+        // your App should show an explanatory UI now.
+        return Future.error('Location permissions are denied');
+      }
+    }
+
+    if (permission == LocationPermission.deniedForever) {
+      // Permissions are denied forever, handle appropriately.
+      const snackBar = SnackBar(content: Text("Por favor revisar permisos de la app"));
+      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+      return Future.error(
+          'Location permissions are permanently denied, we cannot request permissions.');
+    }
+
+    // When we reach here, permissions are granted and we can
+    // continue accessing the position of the device.
+    return await Geolocator.getCurrentPosition();
+  }
 
   Widget buildAltitud() => TextFormField(
     textInputAction: TextInputAction.next,

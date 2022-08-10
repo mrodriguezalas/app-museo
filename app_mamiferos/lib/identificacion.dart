@@ -1,8 +1,12 @@
 import 'dart:io';
+import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:tflite/tflite.dart';
+//import 'package:tflite_flutter/tflite_flutter.dart';
+import 'package:app_mamiferos/classifier/classifier.dart';
+import 'package:app_mamiferos/classifier/classifier_quant.dart';
+import 'package:image/image.dart' as img;
 
 class Identificacion extends StatefulWidget{
   @override
@@ -12,6 +16,9 @@ class Identificacion extends StatefulWidget{
 class _IdentificacionState extends State<Identificacion> {
 
   File? image;
+
+  //New tflite_helper variables
+  late Classifier _classifier;
 
   //tensorflow lite variables and output
   List? _result;
@@ -26,21 +33,23 @@ class _IdentificacionState extends State<Identificacion> {
 
       final imageTemporary = File(image.path);
       setState(() => this.image = imageTemporary);
-      applyModelImage(imageTemporary);
+      img.Image imageInput = img.decodeImage(imageTemporary.readAsBytesSync())!;
+      var pred = _classifier.predict(imageInput);
+      debugPrint(pred.toString());
+
+      setState(() {
+        _name = pred.label.toString();
+        //_confidence = _result != null ? (_result?[0]['confidence'] * 100.0).toString().substring(0, 2) + "%" : "";
+        _confidence = pred.score.toString();
+      });
+      //applyModelImage(imageTemporary);
     } on PlatformException catch (e) {
       print('Failed to pick image: $e');
     }
 
   }
 
-  loadMyModel() async{
-    var result = await Tflite.loadModel(
-      labels: "assets/labels.txt",
-      model: "assets/model_unquant.tflite"
-    );
-  }
-
-  applyModelImage(File file) async{
+  /*applyModelImage(File file) async{
     var res = await Tflite.runModelOnImage(
       path: file.path,
       numResults: 3,
@@ -58,12 +67,13 @@ class _IdentificacionState extends State<Identificacion> {
       _confidence = _result != null ? (_result?[0]['confidence'] * 100.0).toString().substring(0, 2) + "%" : "";
     });
 
-  }
+  }*/
 
   @override
   void initState() {
     super.initState();
-    loadMyModel();
+    //loadMyModel();
+    _classifier = ClassifierQuant();
   }
 
   @override

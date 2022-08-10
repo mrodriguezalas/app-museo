@@ -147,10 +147,10 @@ class HomeScreen extends StatelessWidget {
     mainAxisSize: MainAxisSize.min,
     children: [
       Text('Desarrollo:\nMauricio Rodríguez Alas, estudiante Ingeniería del Software\nUniversidad Latina de Costa Rica\n\n'
-      + 'Especialista:\n Francisco J. Durán\nMastozoología-Vertebrados\nDpto. Historia Natural\nMuseo Nacional de Costa Rica\n\n'
-      + 'Concepto y revisión:\nCecilia Pineda Calles, Bióloga\nSilvia  E. Bolaños, Bióloga\nFrancisco J. Durán, Biólogo\nDpto. Historia Natural\n Museo Nacional de Costa Rica\n\n'
+      + 'Especialista:\nFrancisco J. Durán\nMastozoología-Vertebrados\nDpto. Historia Natural\nMuseo Nacional de Costa Rica\n\n'
+      + 'Concepto y revisión:\nCecilia Pineda Calles, Bióloga\nSilvia  E. Bolaños, Bióloga\nFrancisco J. Durán, Biólogo\nDpto. Historia Natural\nMuseo Nacional de Costa Rica\n\n'
       + 'Ilustraciones:\nLisa Sánchez Aguilar\n\n'
-      + '2021', style: TextStyle(fontSize: 16),),
+      + '2021-2022', style: TextStyle(fontSize: 16),),
       Center(
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(

@@ -58,16 +58,43 @@ class _ObservacionPageState extends State<Observacion> {
       )
       : buildNotes(),
     ),
-    floatingActionButton: FloatingActionButton(
-      backgroundColor: Colors.orange,
-      child: Icon(Icons.add),
-      onPressed: () async {
-        await Navigator.of(context).push(
-          MaterialPageRoute(builder: (context) => AddEditNotePage()),
-        );
-        refreshNotes();
-      },
+    floatingActionButton: Column(
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: [
+      notes.isNotEmpty ?
+      FloatingActionButton(
+        backgroundColor: Colors.orange,
+        child: Icon(Icons.send),
+        onPressed: () async {
+          const snackBar = SnackBar(content: Text("Observaciones enviadas correctamente"));
+
+          ScaffoldMessenger.of(context).showSnackBar(snackBar);
+          refreshNotes();
+        },
+      ) : FloatingActionButton(
+        backgroundColor: Colors.red,
+        child: Icon(Icons.send),
+        onPressed: () async {
+          const snackBar = SnackBar(content: Text("No hay observaciones para enviar"));
+
+          ScaffoldMessenger.of(context).showSnackBar(snackBar);
+
+        },
+      ),
+      SizedBox(height: 8,),
+      FloatingActionButton(
+        backgroundColor: Colors.orange,
+        child: Icon(Icons.add),
+        onPressed: () async {
+          await Navigator.of(context).push(
+            MaterialPageRoute(builder: (context) => AddEditNotePage()),
+          );
+          refreshNotes();
+        },
+      ),
+    ]
     ),
+
   );
 
   Widget buildNotes() => StaggeredGridView.countBuilder(
@@ -93,232 +120,3 @@ class _ObservacionPageState extends State<Observacion> {
     },
   );
 }
-
- /* @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-          backgroundColor: Colors.orange,
-          title: Center(
-
-            child: Text('Añadir Observación'),
-          )
-      ),
-      body:
-          Container(
-          width: double.maxFinite,
-    height: double.maxFinite,
-    decoration: BoxDecoration(
-    image: new DecorationImage(
-    image: new AssetImage('assets/images/background-huellas.png'),
-    fit: BoxFit.cover
-    )
-    ),
-    padding: EdgeInsets.fromLTRB(12, 12, 12, 12),
-    child: Text("Observaciones"))
-    );
-  }
-}
-*/
-/*
-Container(
-width: double.maxFinite,
-height: double.maxFinite,
-decoration: BoxDecoration(
-image: new DecorationImage(
-image: new AssetImage('assets/images/background-huellas.png'),
-fit: BoxFit.cover
-)
-),
-padding: EdgeInsets.fromLTRB(12, 12, 12, 12),
-//child: Expanded(
-
-child:
-ListView(
-padding: EdgeInsets.all(8.0),
-children: <Widget>[
-TextField(
-decoration: InputDecoration(
-fillColor: Colors.white,
-filled: true,
-labelText: 'País, Cantón, Distrito',
-border: OutlineInputBorder()
-),
-),
-SizedBox(height: 16.0,),
-TextField(
-decoration: InputDecoration(
-fillColor: Colors.white,
-filled: true,
-labelText: 'Descripción de localidad', //description
-border: OutlineInputBorder()
-),
-),SizedBox(height: 16.0,),
-TextField(
-decoration: InputDecoration(
-fillColor: Colors.white,
-filled: true,
-labelText: 'Coordenadas (automático)',
-border: OutlineInputBorder()
-),
-),SizedBox(height: 16.0,),
-TextField(
-decoration: InputDecoration(
-fillColor: Colors.white,
-filled: true,
-labelText: 'Altitud',
-border: OutlineInputBorder()
-),
-),SizedBox(height: 16.0,),
-TextField(
-decoration: InputDecoration(
-fillColor: Colors.white,
-filled: true,
-labelText: 'Recolector(es)',
-border: OutlineInputBorder()
-),
-),SizedBox(height: 16.0,),
-TextField(
-decoration: InputDecoration(
-fillColor: Colors.white,
-filled: true,
-labelText: 'Fecha', //createdTime
-border: OutlineInputBorder()
-),
-),SizedBox(height: 16.0,),
-TextField(
-decoration: InputDecoration(
-fillColor: Colors.white,
-filled: true,
-labelText: 'Hábitat',
-border: OutlineInputBorder()
-),
-),
-SizedBox(height: 16.0,),
-TextField(
-decoration: InputDecoration(
-fillColor: Colors.white,
-filled: true,
-labelText: 'Área protegida',
-border: OutlineInputBorder()
-),
-),
-SizedBox(height: 16.0,),
-TextField(
-decoration: InputDecoration(
-fillColor: Colors.white,
-filled: true,
-labelText: 'Metodología',
-border: OutlineInputBorder()
-),
-),
-SizedBox(height: 16.0,),
-TextField(
-decoration: InputDecoration(
-fillColor: Colors.white,
-filled: true,
-labelText: 'Taxón',
-border: OutlineInputBorder()
-),
-),
-SizedBox(height: 16.0,),
-TextField(
-decoration: InputDecoration(
-fillColor: Colors.white,
-filled: true,
-labelText: 'Reino',
-border: OutlineInputBorder()
-),
-),
-SizedBox(height: 16.0,),
-TextField(
-decoration: InputDecoration(
-fillColor: Colors.white,
-filled: true,
-labelText: 'Filo',
-border: OutlineInputBorder()
-),
-),
-SizedBox(height: 16.0,),
-TextField(
-decoration: InputDecoration(
-fillColor: Colors.white,
-filled: true,
-labelText: 'Subfilo',
-border: OutlineInputBorder()
-),
-),
-SizedBox(height: 16.0,),
-TextField(
-decoration: InputDecoration(
-fillColor: Colors.white,
-filled: true,
-labelText: 'Clase',
-border: OutlineInputBorder()
-),
-),
-SizedBox(height: 16.0,),
-TextField(
-decoration: InputDecoration(
-fillColor: Colors.white,
-filled: true,
-labelText: 'Subclase',
-border: OutlineInputBorder()
-),
-),
-SizedBox(height: 16.0,),
-TextField(
-decoration: InputDecoration(
-fillColor: Colors.white,
-filled: true,
-labelText: 'Orden',
-border: OutlineInputBorder()
-),
-),
-SizedBox(height: 16.0,),
-TextField(
-decoration: InputDecoration(
-fillColor: Colors.white,
-filled: true,
-labelText: 'Suborden',
-border: OutlineInputBorder()
-),
-),
-SizedBox(height: 16.0,),
-TextField(
-decoration: InputDecoration(fillColor: Colors.white,
-filled: true,
-labelText: 'Superfamilia',
-border: OutlineInputBorder()
-),
-),
-SizedBox(height: 16.0,),
-TextField(
-decoration: InputDecoration(fillColor: Colors.white,
-filled: true,
-labelText: 'Familia',
-border: OutlineInputBorder()
-),
-),
-SizedBox(height: 16.0,),
-TextField(
-decoration: InputDecoration(
-fillColor: Colors.white,
-filled: true,
-labelText: 'Categoría',
-border: OutlineInputBorder()
-),
-),
-SizedBox(height: 16.0,),
-ElevatedButton(
-
-child: Text('Añadir observación'),
-onPressed: () {
-ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-content: Text('Observación añadida para enviar')));
-Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
-})
-]
-),
-//)
-),*/
