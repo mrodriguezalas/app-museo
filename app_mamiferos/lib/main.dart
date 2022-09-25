@@ -7,36 +7,51 @@ import 'package:app_mamiferos/l10n/l10n.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:url_launcher/link.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:app_mamiferos/widget/language_picker_widget.dart';
+import 'package:app_mamiferos/provider/locale_provider.dart';
+import 'onboarding.dart';
+import 'package:provider/provider.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+Future main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: HomeScreen(),
-      supportedLocales: L10n.all,
-      localizationsDelegates: [
-        AppLocalizations.delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-      ],
-    );
-  }
+  Widget build(BuildContext context) => ChangeNotifierProvider(//{
+    create: (context) => LocaleProvider(),
+    builder: (context, child){
+      final provider = Provider.of<LocaleProvider>(context);
+      return MaterialApp(
+        home: OnBoardingPage(),
+        locale: provider.locale,
+        supportedLocales: L10n.all,
+        localizationsDelegates: [
+          AppLocalizations.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+        ],
+      );
+    }
+  //}
+  );
 }
 
 class HomeScreen extends StatelessWidget {
 
   Future<void>? _launched;
-  String _launchUrl = 'https://gogetfunding.com/?p=7314856';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          actions: [LanguagePickerWidget()],
             backgroundColor: Colors.orange,
             title: Center(
               child: Text(
@@ -135,6 +150,7 @@ class HomeScreen extends StatelessWidget {
                         },
                         icon: Icon(Icons.photo_album),
                       ),
+                      LanguageWidget(),
                     ],
                   ),
                   ])
@@ -171,7 +187,11 @@ class HomeScreen extends StatelessWidget {
         children: [
           Link(uri: Uri.parse('https://www.museocostarica.go.cr/'),
               builder: (context, followLink) => GestureDetector(
-                onTap: followLink,
+                onTap: () async {
+                  final urlMuseo = 'https://www.museocostarica.go.cr/';
+
+                  openBrowserURL(url: urlMuseo, inApp: false);
+                },
                 child: Text('National Museum of Costa Rica Webpage\n\n',
                 style: TextStyle(
                   color: Colors.blue,
@@ -180,8 +200,25 @@ class HomeScreen extends StatelessWidget {
               )),
           Link(uri: Uri.parse('https://www.museocostarica.go.cr/divulgacion/publicaciones/guia-huellas-de-mamiferos-del-acc/'),
               builder: (context, followLink) => GestureDetector(
-                onTap: followLink,
-                child: Text('Free PDF Guide with Mammal Footprints from the Central Convervation Areas',
+                onTap: () async {
+                  final url = 'https://www.museocostarica.go.cr/divulgacion/publicaciones/guia-huellas-de-mamiferos-del-acc/';
+
+                  openBrowserURL(url: url, inApp: false);
+                },
+                child: Text('Free PDF Guide with Mammal Footprints from the Central Convervation Areas\n\n',
+                  style: TextStyle(
+                      color: Colors.blue,
+                      decoration: TextDecoration.underline
+                  ),),
+              )),
+          Link(uri: Uri.parse('https://www.sinac.go.cr/ES/Paginas/default.aspx'),
+              builder: (context, followLink) => GestureDetector(
+                onTap: () async {
+                  final urlSinac = 'https://www.sinac.go.cr/ES/Paginas/default.aspx';
+
+                  openBrowserURL(url: urlSinac, inApp: false);
+                },
+                child: Text('Sistema Nacional de Áreas de Conservación\n\n',
                   style: TextStyle(
                       color: Colors.blue,
                       decoration: TextDecoration.underline
@@ -199,6 +236,16 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ));
+  Future openBrowserURL({
+    required String url,
+    bool inApp = false,
+  }) async {
+    if (await canLaunch(url)){
+      await launch(
+        url
+      );
+    }
+  }
 }
 
 Future navigateToCatalogo(context) async {

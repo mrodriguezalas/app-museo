@@ -1,4 +1,8 @@
+import 'dart:math';
+
 import 'package:app_mamiferos/main.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
@@ -39,6 +43,14 @@ class _ObservacionPageState extends State<Observacion> {
     setState( () => isLoading = false);
   }
 
+  Future deleteSentNote(id) async {
+    setState( () => isLoading = true);
+
+    await NotesDatabase.instance.delete(id);
+
+    setState( () => isLoading = false);
+  }
+
   @override
   Widget build(BuildContext context) => Scaffold(
     appBar: AppBar(
@@ -66,9 +78,12 @@ class _ObservacionPageState extends State<Observacion> {
         backgroundColor: Colors.orange,
         child: Icon(Icons.send),
         onPressed: () async {
-          const snackBar = SnackBar(content: Text("Observaciones enviadas correctamente"));
 
-          ScaffoldMessenger.of(context).showSnackBar(snackBar);
+          for(var note in notes){
+            print(note.title);
+            createObservacion(note);
+            deleteSentNote(note.id);
+          }
           refreshNotes();
         },
       ) : FloatingActionButton(
@@ -119,4 +134,43 @@ class _ObservacionPageState extends State<Observacion> {
       );
     },
   );
+
+  Future createObservacion(Note observacion) async{
+    final docUser = FirebaseFirestore.instance.collection('observaciones_funcionarios').doc(Random().nextInt(10000).toString() + Random().nextInt(10000).toString());
+
+    final note = Note(
+      id: int.parse(docUser.id),
+      createdTime: DateTime.now(),
+      title: observacion.title,
+      description: observacion.description,
+      paisCantonDistrito: observacion.paisCantonDistrito,
+      coordenadas: observacion.coordenadas,
+      altitud: observacion.altitud,
+      recolectores: observacion.recolectores,
+      habitat: observacion.habitat,
+      areaProtegida: observacion.areaProtegida,
+      metodologia: observacion.metodologia,
+      taxon: observacion.taxon,
+      reino: observacion.reino,
+      filo: observacion.filo,
+      subfilo: observacion.subfilo,
+      clase: observacion.clase,
+      subclase: observacion.subclase,
+      orden: observacion.orden,
+      suborden: observacion.suborden,
+      superfamilia: observacion.superfamilia,
+      familia: observacion.familia,
+      categoria: observacion.categoria
+    );
+
+    final json = note.toJson();
+
+    //Write data to firebase
+      await docUser.set(json);
+      const snackBar = SnackBar(content: Text("1 observación enviada correctamente"));
+      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+
+      /*const failSnackBar = SnackBar(content: Text("No hay conexión, intente más tarde"));
+      ScaffoldMessenger.of(context).showSnackBar(failSnackBar);*/
+  }
 }

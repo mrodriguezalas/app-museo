@@ -1,5 +1,7 @@
 import 'package:app_mamiferos/l10n/l10n.dart';
+import 'package:app_mamiferos/provider/locale_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'animal_details.dart';
 import 'model/animal.dart';
 import 'data/animal_data.dart';
@@ -25,12 +27,19 @@ class CatalogoState extends State<FilterCatalogo> {
   @override
   void initState(){
     super.initState();
-
     animals = allAnimals;
   }
 
   @override
   Widget build(BuildContext context) {
+    /*final provider = Provider.of<LocaleProvider>(context);
+    final locale = provider.locale;
+    final flag = L10n.getFlag(locale.languageCode);
+
+    print(provider);
+    print(locale);
+    print(flag);*/
+
     return MaterialApp(
       home: Scaffold(
           appBar: AppBar(
@@ -152,9 +161,13 @@ class CatalogoState extends State<FilterCatalogo> {
   void searchAnimal(String query){
     final animals = allAnimals.where((animal) {
       final nombreComunLower = animal.nombre.toLowerCase();
+      final nombreCientificoLower = animal.nombreCientifico.toLowerCase();
+      final nombreSinTilde = animal.nombre.toLowerCase().replaceAll('á', 'a').replaceAll('é', 'e').replaceAll('í', 'i')
+          .replaceAll('ó', 'o').replaceAll('ú', 'u').replaceAll('ü', 'u').replaceAll('ñ', 'n');
       final searchLower = query.toLowerCase();
 
-      return nombreComunLower.contains(searchLower);
+      return nombreComunLower.contains(searchLower) || nombreCientificoLower.contains(searchLower) ||
+      nombreSinTilde.contains(searchLower);
     }).toList();
 
     setState(() {
